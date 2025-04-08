@@ -9,6 +9,7 @@ import javax.validation.constraints.Pattern;
 @Entity
 @Table(name = "users")
 public class User {
+
     public User() {
     }
 
@@ -30,7 +31,6 @@ public class User {
     @Email(message = "Email should be valid. Example ***@domainname.***")
     @Column(name = "email")
     private String email;
-
 
     public User(String firstName, String lastName, String email) {
         this.firstName = firstName;
@@ -73,11 +73,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "User{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", email='" + email + '\'' + '}';
     }
 }
